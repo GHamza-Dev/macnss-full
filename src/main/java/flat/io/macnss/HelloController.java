@@ -12,6 +12,6 @@ public class HelloController {
     public String hello(@PathVariable("name") String name){
         ModelAndView mv = new ModelAndView();
         mv.addObject(name);
-        return "hello";
+        return "home";
     }
 }
