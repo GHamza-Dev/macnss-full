@@ -11,21 +11,16 @@ public class Refundable {
     @Column
     private String name;
 
-    @Column
-    private Float repayment;
-
     public Refundable() {
     }
 
     public Refundable(String name, Float repayment) {
         this.name = name;
-        this.repayment = repayment;
     }
 
     public Refundable(long id, String name, Float repayment) {
         this.id = id;
         this.name = name;
-        this.repayment = repayment;
     }
 
     public long getId() {
@@ -42,13 +37,5 @@ public class Refundable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Float getRepayment() {
-        return repayment;
-    }
-
-    public void setRepayment(Float repayment) {
-        this.repayment = repayment;
     }
 }

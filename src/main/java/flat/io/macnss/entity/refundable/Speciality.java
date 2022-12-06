@@ -7,6 +7,9 @@ import jakarta.persistence.Entity;
 public class Speciality extends Refundable{
 
     @Column
+    private Float repayment;
+
+    @Column
     private Boolean medicationRefundable;
 
     public Speciality() {
@@ -28,5 +31,13 @@ public class Speciality extends Refundable{
 
     public void setMedicationRefundable(Boolean medicationRefundable) {
         this.medicationRefundable = medicationRefundable;
+    }
+
+    public Float getRepayment() {
+        return repayment;
+    }
+
+    public void setRepayment(Float repayment) {
+        this.repayment = repayment;
     }
 }
