@@ -28,4 +28,8 @@ public class PersonDao{
 
         return person;
     }
+
+    public void save(Person person){
+        JPA.wrap(entityManager -> entityManager.persist(person));
+    }
 }

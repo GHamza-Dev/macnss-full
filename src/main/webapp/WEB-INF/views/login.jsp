@@ -12,7 +12,14 @@
     <form action="<%=Global.url%>users/login" method="POST">
         <input name="email" type="email" placeholder="email">
         <input name="password" type="password" placeholder="password">
-        <input name="role" type="password" placeholder="role">
+        <div>
+            <label>Agent</label>
+            <input name="role" type="radio" value="agent" checked>
+            <br>
+            <label>Patient</label>
+            <input name="role" type="radio" value="patient">
+        </div>
+        <br><br>
         <button>Login</button>
     </form>
 </body>
