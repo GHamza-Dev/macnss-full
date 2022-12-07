@@ -8,6 +8,7 @@
     <h1>Hello, World!</h1>
     <ul>
         <li><a href="<%=Global.url%>patient/add">Add patient</a></li>
+        <li><a href="<%=Global.url%>dossier/add">Add dossier</a></li>
     </ul>
 
 </body>

@@ -4,8 +4,16 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
     <persistence-unit name="default">
+        <class>flat.io.macnss.entity.dossier.Dossier</class>
+        <class>flat.io.macnss.entity.refundable.Medication</class>
+        <class>flat.io.macnss.entity.refundable.Analysis</class>
+        <class>flat.io.macnss.entity.refundable.Radio</class>
+        <class>flat.io.macnss.entity.refundable.Speciality</class>
+        <class>flat.io.macnss.entity.person.Agent</class>
+        <class>flat.io.macnss.entity.person.Patient</class>
+        <class>flat.io.macnss.entity.person.Admin</class>
+
         <properties>
-<!--            <property name="hibernate.connection.url" value="jdbc:mysql://database:3306/macnss-full"/>-->
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/macnss-full"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
             <property name="hibernate.connection.username" value="root"/>

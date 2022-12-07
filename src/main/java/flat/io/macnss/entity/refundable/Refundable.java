@@ -14,11 +14,11 @@ public class Refundable {
     public Refundable() {
     }
 
-    public Refundable(String name, Float repayment) {
+    public Refundable(String name) {
         this.name = name;
     }
 
-    public Refundable(long id, String name, Float repayment) {
+    public Refundable(long id, String name) {
         this.id = id;
         this.name = name;
     }

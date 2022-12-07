@@ -10,8 +10,8 @@ import java.util.List;
 @Entity
 public class Patient extends Person {
 
-    @Column(unique = true)
-    private long patientNumber;
+    @Column(name = "patient_number",unique = true)
+    private Long patientNumber;
 
     @OneToMany(mappedBy = "patient")
     private List<Dossier> dossiers;
@@ -33,7 +33,7 @@ public class Patient extends Person {
         return patientNumber;
     }
 
-    public void setPatientNumber(long patientNumber) {
+    public void setPatientNumber(Long patientNumber) {
         this.patientNumber = patientNumber;
     }
 }

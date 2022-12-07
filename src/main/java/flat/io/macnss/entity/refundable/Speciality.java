@@ -9,19 +9,21 @@ public class Speciality extends Refundable{
     @Column
     private Float repayment;
 
-    @Column
+    @Column(name = "medication_refundable")
     private Boolean medicationRefundable;
 
     public Speciality() {
     }
 
     public Speciality(String name, Float repayment, Boolean medicationRefundable) {
-        super(name, repayment);
+        super(name);
+        this.repayment = repayment;
         this.medicationRefundable = medicationRefundable;
     }
 
     public Speciality(long id, String name, Float repayment, Boolean medicationRefundable) {
-        super(id, name, repayment);
+        super(id, name);
+        this.repayment = repayment;
         this.medicationRefundable = medicationRefundable;
     }
 

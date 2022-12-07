@@ -12,13 +12,13 @@ public class Analysis extends Refundable{
     public Analysis() {
     }
 
-    public Analysis(String name, Float repayment, Float percentage) {
-        super(name, repayment);
+    public Analysis(String name, Float percentage) {
+        super(name);
         this.percentage = percentage;
     }
 
-    public Analysis(long id, String name, Float repayment, Float percentage) {
-        super(id, name, repayment);
+    public Analysis(long id, String name, Float percentage) {
+        super(id, name);
         this.percentage = percentage;
     }
 

@@ -19,6 +19,14 @@ public class JPA {
 
     public static void wrap(Consumer<EntityManager> action){
         EntityManager em = entityManager();
+        wrapper(em, action);
+    }
+
+    public static void wrap(EntityManager em,Consumer<EntityManager> action){
+        wrapper(em, action);
+    }
+
+    private static void wrapper(EntityManager em, Consumer<EntityManager> action) {
         EntityTransaction tx = em.getTransaction();
         try {
             tx.begin();

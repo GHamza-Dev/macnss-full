@@ -5,6 +5,8 @@ import flat.io.macnss.entity.person.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PatientService {
 
@@ -19,5 +21,9 @@ public class PatientService {
         Patient patient = new Patient(email,username,password,patientNumber);
         patientDao.save(patient);
         return patient.getId() != null ? patient : null;
+    }
+
+    public List<Patient> getPatients(){
+        return patientDao.getAll();
     }
 }
