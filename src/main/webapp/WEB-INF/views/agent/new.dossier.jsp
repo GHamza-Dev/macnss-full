@@ -1,15 +1,6 @@
-<%@ page import="flat.io.macnss.Config.Global" %>
-<%@ page contentType="text/html;charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-
-<html>
-<head>
-    <title>New Dossier</title>
-</head>
-<body>
+<%@ include file="../layout/header.jsp" %>
 <h1>New Dossier</h1>
-<form action="<%=Global.url%>dossier/add" method="POST">
+<form action="${url}dossier/add" method="POST">
     <div>
         <label>Medication</label>
         <select name="medication">
@@ -53,5 +44,5 @@
     <br><br>
     <button>Submit</button>
 </form>
-</body>
-</html>
+<%@ include file="../layout/footer.jsp" %>
+
