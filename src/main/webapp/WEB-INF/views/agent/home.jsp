@@ -1,15 +1,8 @@
-<%@ page import="flat.io.macnss.Config.Global" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Hello world</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-    <ul>
-        <li><a href="<%=Global.url%>patient/add">Add patient</a></li>
-        <li><a href="<%=Global.url%>dossier/add">Add dossier</a></li>
-    </ul>
+<%@ include file="./inc/layout.header.jsp" %>
 
-</body>
-</html>
+<div class="ms-2">
+    <h1>Home, Welcome!</h1>
+</div>
+
+<%@ include file="./inc/layout.footer.jsp" %>
+
