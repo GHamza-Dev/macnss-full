@@ -29,8 +29,9 @@ public class Root implements Filter {
 
         String requestedUrl = httpRequest.getRequestURL().toString();
         String loginUrl = this.baseUrl+"users/login";
+        String resourcesUrl = this.baseUrl+"resources";
 
-        if(session.getAttribute("person") == null && !loginUrl.equals(requestedUrl)){
+        if(session.getAttribute("person") == null && !loginUrl.equals(requestedUrl) && !requestedUrl.startsWith(resourcesUrl)){
             httpResponse.sendRedirect(Global.url+"users/login");
             return;
         }

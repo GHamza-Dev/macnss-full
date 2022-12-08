@@ -6,6 +6,10 @@
 
 <html>
 <head>
-    <title>New Dossier</title>
+    <title>MaCNSS | Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="<c:url value="/resources/styles/bootstrap.min.css" />" rel="stylesheet">
+    <script src="<c:url value="/resources/scripts/bootstrap.min.js" />"></script>
 </head>
 <body>

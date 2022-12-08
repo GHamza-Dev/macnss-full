@@ -6,9 +6,11 @@
 
         <mvc:annotation-driven />
         <context:component-scan base-package="flat.io.macnss" />
+        <mvc:resources mapping="/resources/**" location="/resources/"/>
 
-        <!-- Resolves views selected for rendering by @Controllers to .jsp resources
-            in the /WEB-INF/views directory -->
+
+    <!-- Resolves views selected for rendering by @Controllers to .jsp resources
+        in the /WEB-INF/views directory -->
         <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
             <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
             <property name="prefix" value="/WEB-INF/views/" />
