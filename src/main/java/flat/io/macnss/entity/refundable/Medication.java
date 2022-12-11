@@ -1,9 +1,7 @@
 package flat.io.macnss.entity.refundable;
 
 import flat.io.macnss.entity.dossier.Dossier;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -15,7 +13,7 @@ public class Medication extends Refundable {
     @Column
     private Float repayment;
 
-    @ManyToMany(mappedBy = "medications")
+    @ManyToMany(mappedBy = "medications",fetch = FetchType.LAZY)
     private List<Dossier> dossiers;
 
     public Medication() {
@@ -47,5 +45,9 @@ public class Medication extends Refundable {
 
     public void setBarCode(Long barCode) {
         this.barCode = barCode;
+    }
+
+    public void setDossiers(List<Dossier> dossiers) {
+        this.dossiers = dossiers;
     }
 }

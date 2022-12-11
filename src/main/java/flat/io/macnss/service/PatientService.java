@@ -2,6 +2,7 @@ package flat.io.macnss.service;
 
 import flat.io.macnss.dao.PatientDao;
 import flat.io.macnss.entity.person.Patient;
+import flat.io.macnss.entity.refundable.Medication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,10 @@ public class PatientService {
     @Autowired
     public void setPatientDao(PatientDao patientDao) {
         this.patientDao = patientDao;
+    }
+
+    public Patient getPatientByNumber(Long patientNumber){
+        return patientDao.selectPatientByNumber(patientNumber);
     }
 
     public Patient createPatient(String email, String password, String username, Long patientNumber){

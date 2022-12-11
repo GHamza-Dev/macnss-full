@@ -25,7 +25,6 @@ public class Root implements Filter {
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
         HttpSession session = httpRequest.getSession();
-        System.out.println("session inside filter: "+session);
 
         String requestedUrl = httpRequest.getRequestURL().toString();
         String loginUrl = this.baseUrl+"users/login";

@@ -36,4 +36,8 @@ public class Patient extends Person {
     public void setPatientNumber(Long patientNumber) {
         this.patientNumber = patientNumber;
     }
+
+    public void setDossiers(List<Dossier> dossiers) {
+        this.dossiers = dossiers;
+    }
 }

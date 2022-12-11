@@ -1,13 +1,11 @@
 package flat.io.macnss.controller;
 
+import com.google.gson.Gson;
 import flat.io.macnss.entity.person.Patient;
 import flat.io.macnss.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/patient")
@@ -40,5 +38,14 @@ public class PatientController {
         }
 
         return "redirect:add";
+    }
+
+    @ResponseBody
+    @GetMapping("/search-patient/{patient-number}")
+    public String searchPatient(@PathVariable("patient-number") Long patientNumber){
+        Patient patient = patientService.getPatientByNumber(patientNumber);
+        if(patient != null) patient.setDossiers(null);
+        Gson gson = new Gson();
+        return gson.toJson(patient);
     }
 }
